@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>your_name_here | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"your_name_here</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#" id="contactBtn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="assets/images/profile.jpg" alt="your_name_here" class="profile-img">
+      <h1>your_name_here</h1>
+      <p>Assistant Professor | Department of MCA | Pimpri Chinchwad University</p>
+      <button id="knowMore" onclick="window.location.href='about.html'">Know More</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 your_name_here | All Rights Reserved</p>
+  </footer>
+
+  <!-- Popup Contact Form -->
+  <div id="popupForm" class="popup">
+    <div class="popup-content">
+      <span id="closePopup">&times;</span>
+      <h2>Contact Me</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Your Name" required>
+        <label>Email:</label>
+        <input type="email" placeholder="Your Email" required>
+        <label>Message:</label>
+        <textarea placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
