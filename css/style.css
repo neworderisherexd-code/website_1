@@ -1,4 +1,6 @@
-/* ---------- BASIC RESET ---------- */
+/* =============================
+   GLOBAL
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,274 +9,183 @@
 }
 
 body {
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
+  background: #f5f7fa;
+  color: #1f2d3d;
 }
 
-/* ---------- NAVBAR ---------- */
+/* =============================
+   NAVBAR
+============================== */
 .navbar {
-  background: #1e3a8a;
-  color: #fff;
+  background: #1e3a8a; /* Deep blue */
+  color: white;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  flex-wrap: wrap;
 }
 
-.navbar .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  list-style: none;
 }
 
-.navbar a {
+.navbar ul li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: #93c5fd;
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #facc15; /* Yellow highlight */
 }
 
-/* ---------- HERO SECTION ---------- */
+/* =============================
+   HERO SECTION
+============================== */
 .hero {
-  min-height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
-  flex-direction: column;
-  padding: 2rem;
+  padding: 60px 20px;
+}
+
+.hero-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 650px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
 }
 
 .profile-img {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 15px;
   border: 4px solid #1e3a8a;
+  margin-bottom: 20px;
 }
 
-.hero h1 {
-  font-size: 2rem;
+.hero-content h1 {
+  font-size: 32px;
   color: #1e3a8a;
 }
 
-.hero p {
-  font-size: 1rem;
-  margin: 10px 0;
+.hero-content p {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.hero button {
+#knowMore {
+  margin-top: 20px;
+  padding: 10px 25px;
   background: #1e3a8a;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-.hero button:hover {
+#knowMore:hover {
   background: #3b82f6;
 }
 
-/* ---------- ABOUT PAGE ---------- */
-.about {
-  padding: 3rem 10%;
-}
-
-.about h1 {
-  color: #1e3a8a;
+/* =============================
+   FOOTER
+============================== */
+footer {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 15px;
+  margin-top: 50px;
+  background: #1e3a8a;
+  color: white;
 }
 
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.about-container img {
-  width: 250px;
-  border-radius: 10px;
-  border: 3px solid #1e3a8a;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-text h3 {
-  color: #1e3a8a;
-  margin-top: 1rem;
-}
-
-.about-text ul {
-  margin-left: 1.2rem;
-  list-style: disc;
-}
-
-/* ---------- RESEARCH PAGE ---------- */
-.research-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 2rem;
-}
-
-.paperCard {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: left;
-}
-
-.paperCard h3 {
-  color: #1e3a8a;
-  margin-bottom: 10px;
-}
-
-.paperCard p {
-  margin-bottom: 10px;
-}
-
-
-/* ---------- GALLERY PAGE ---------- */
-.gallery {
-  padding: 3rem 10%;
-  text-align: center;
-}
-
-.gallery h1 {
-  color: #1e3a8a;
-  margin-bottom: 2rem;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* ---------- CONTACT PAGE ---------- */
-.contact {
-  padding: 3rem 10%;
-  text-align: center;
-}
-
-.contact h1 {
-  color: #1e3a8a;
-  margin-bottom: 1rem;
-}
-
-.contact-container p {
-  margin: 10px 0;
-}
-
-.contact-container a {
-  color: #1e3a8a;
-  text-decoration: none;
-}
-
-.contact-container a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- POPUP CONTACT FORM ---------- */
+/* =============================
+   POPUP CONTACT FORM
+============================== */
 .popup {
-  display: none;
+  display: none;  
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
 
 .popup-content {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 350px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 #closePopup {
-  float: right;
-  font-size: 20px;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 26px;
   cursor: pointer;
 }
 
-.popup-content form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
+.popup-content h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
 }
 
 .popup-content input,
 .popup-content textarea {
+  width: 100%;
   margin: 10px 0;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  resize: none;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .popup-content button {
+  width: 100%;
+  padding: 10px;
   background: #1e3a8a;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 17px;
+  transition: 0.3s ease;
 }
 
 .popup-content button:hover {
   background: #3b82f6;
 }
 
-/* ---------- FOOTER ---------- */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #1e3a8a;
-  color: white;
-  margin-top: 20px;
-  font-size: 0.9rem;
-}
-
-/* ---------- RESPONSIVE DESIGN ---------- */
+/* =============================
+   RESPONSIVE
+============================== */
 @media (max-width: 768px) {
-  .about-container {
+  .navbar {
     flex-direction: column;
-    text-align: center;
+    gap: 10px;
   }
 
   .navbar ul {
@@ -282,11 +193,7 @@ footer {
     justify-content: center;
   }
 
-  .popup-content {
-    width: 90%;
-  }
-
-  iframe {
-    height: 300px !important;
+  .hero-content {
+    width: 95%;
   }
 }
