@@ -1,37 +1,32 @@
-const certificateFiles = [
-  "C4C.jpg",
-  "C5A-1.jpg",
-  "CERTIFICATE 24-syllabus Design.jpg",
-  "certificate RDK.jpg",
-  "Certificate_of_Participation-Certificate.jpg",
-  "Certificate-Foresight+and+Formulation.jpg",
-  "KALE RAVIKANT DNYANESHWAR RE.jpg",
-  "PROF-RAVIKANT-KALE-Moodle-Test.jpg",
-  "Prof. RAVIKANT KALE_siph_Publication.jpg",
-  "Ravikant Kale_page-0001.jpg",
-  "RAVIKANT_DNYANESHWAR_KALE (2).jpg"
-];
+document.addEventListener("DOMContentLoaded", () => {
 
-const grid = document.getElementById("researchGrid");
+  fetch("/assets/certificates/certificates.json")
+    .then(res => res.json())
+    .then(files => {
+      const grid = document.getElementById("researchGrid");
 
+      files.forEach(file => {
 
-function cleanName(str) {
-  return str
-    .replace(/\.(jpg|png|jpeg)$/i, "")     
-    .replace(/[_\-]+/g, " ")                 
-    .replace(/\s+/g, " ")                    
-    .trim();                                 
-}
+        const card = document.createElement("div");
+        card.classList.add("research-img-card");
 
+        const name = file
+          .replace(/\.(jpg|jpeg|png)$/i, "")
+          .replace(/[_-]+/g, " ")
+          .trim();
 
-certificateFiles.forEach(file => {
-  const card = document.createElement("div");
-  card.classList.add("research-img-card");
+        card.innerHTML = `
+          <img src="/assets/certificates/${file}" alt="${name}">
+          <p>${name}</p>
+        `;
 
-  card.innerHTML = `
-    <img src="assets/certificates/${file}" alt="${file}">
-    <p>${cleanName(file)}</p>
-  `;
+        grid.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error("Failed to load certificates:", err);
+      document.getElementById("researchGrid").innerHTML =
+        "<p style='color:red'>Failed to load certificates.</p>";
+    });
 
-  grid.appendChild(card);
 });
