@@ -116,3 +116,22 @@
     grid-template-columns: 1fr;
   }
 }
+/* About Page Layout */
+.about-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.about-section img {
+  width: 330px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+}
