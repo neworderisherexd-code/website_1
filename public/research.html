@@ -1,28 +1,92 @@
-// Load certificates.json and render all certificates dynamically
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Mr. Ravikant D. Kale</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
-fetch("assets/certificates/certificates.json")
-  .then(response => response.json())
-  .then(files => {
-    const grid = document.getElementById("researchGrid");
+<header class="navbar">
+  <div class="logo">Mr. Ravikant Dnyaneshwar Kale</div>
+  <nav class="navlinks">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a class="active" href="/research.html">Research</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    files.forEach(file => {
-      const card = document.createElement("div");
-      card.classList.add("research-img-card");
+<section class="research container">
+  <h1>Research Publications & Certificates</h1>
+  <p>Images below are static — drop new files into <code>/public/assets/certificates/</code> and update this HTML (or I can auto-generate).</p>
 
-      // Format name for caption
-      const name = file
-        .replace(/\.(jpg|jpeg|png)$/i, "")
-        .replace(/[_\-]+/g, " ")
-        .trim();
+  <div class="research-img-grid">
+    <!-- Example card — duplicate and change image filename / caption for each certificate -->
+    <div class="research-img-card">
+      <img src="/assets/certificates/C4C.jpg" alt="C4C">
+      <p>C4C</p>
+    </div>
 
-      card.innerHTML = `
-        <img src="assets/certificates/${file}" alt="${name}">
-        <p>${name}</p>
-      `;
+    <div class="research-img-card">
+      <img src="/assets/certificates/C5A-1.jpg" alt="C5A-1">
+      <p>C5A-1</p>
+    </div>
 
-      grid.appendChild(card);
-    });
-  })
-  .catch(err => {
-    console.error("Error loading certificates:", err);
-  });
+    <div class="research-img-card">
+      <img src="/assets/certificates/CERTIFICATE 24-syllabus Design.jpg" alt="Syllabus certificate">
+      <p>Syllabus - 24</p>
+    </div>
+
+    <div class="research-img-card">
+      <img src="/assets/certificates/certificate RDK.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+
+     <div class="research-img-card">
+      <img src="/assets/certificates/Certificate_of_Participation-Certificate_of_Participation_948 (1).jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+     <div class="research-img-card">
+      <img src="/assets/certificates/Certificate-Foresight+and+Formulate+the+Various+IoT+Security+Models+used+in+Tourism+and+Hospitality--Finalized.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+     <div class="research-img-card">
+      <img src="/assets/certificates/KALE RAVIKANT DNYANESHWAR Research ethics Certificate.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+
+     <div class="research-img-card">
+      <img src="/assets/certificates/PROF-RAVIKANT-KALE-Moodle-Test-for-Teachers-Participant-Test-Certificate_page-0001.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+
+     <div class="research-img-card">
+      <img src="/assets/certificates/Prof. RAVIKANT KALE_siph_Publication.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+
+     <div class="research-img-card">
+      <img src="/assets/certificates/Ravikant Kale_page-0001.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+
+    <div class="research-img-card">
+      <img src="/assets/certificates/RAVIKANT_DNYANESHWAR_KALE (2)_page-0001.jpg" alt="certificate RDK">
+      <p>certificate RDK</p>
+    </div>
+
+   
+  </div>
+</section>
+
+<footer>
+  <p style="padding:20px; text-align:center;">© 2025 Mr. Ravikant Dnyaneshwar Kale | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
