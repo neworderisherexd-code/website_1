@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mr. Ravikant Dnyaneshwar Kale
- | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mr. Ravikant Dnyaneshwar Kale | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo"Mr. Ravikant Dnyaneshwar Kale
-</div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#" id="contactBtn">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">Mr. Ravikant Dnyaneshwar Kale</div>
+  <button class="nav-toggle">☰</button>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="assets/images/Ravikant_kale.jpg" alt="Mr. Ravikant Dnyaneshwar Kale
-" class="profile-img">
-      <h1>Mr. Ravikant Dnyaneshwar Kale
-</h1>
-      <p>Assistant Professor | School of Computer Applications
-| Pimpri Chinchwad University</p>
-      <button id="knowMore" onclick="window.location.href='about.html'">Know More</button>
-    </div>
-  </section>
+  <nav class="navlinks">
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Mr. Ravikant Dnyaneshwar Kale
-| All Rights Reserved</p>
-  </footer>
+<section class="hero">
+  <!-- Floating Math Background -->
+  <div class="equation-bg">∑ √ π ∞ ∫ → α ÷ × 𝜃 𝛼 𝛽</div>
 
-  <!-- Popup Contact Form -->
-  <div id="popupForm" class="popup">
-    <div class="popup-content">
-      <span id="closePopup">&times;</span>
-      <h2>Contact Me</h2>
-      <form>
-        <label>Name:</label>
-        <input type="text" placeholder="Your Name" required>
-        <label>Email:</label>
-        <input type="email" placeholder="Your Email" required>
-        <label>Message:</label>
-        <textarea placeholder="Write your message..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+  <div class="hero-card">
+    <img src="assets/images/Ravikant_Kale.jpg" class="profile-img" alt="Profile Photo">
+
+    <div class="hero-text">
+      <h1>Mr. Ravikant Dnyaneshwar Kale</h1>
+
+      <p class="role">
+        Assistant Professor<br>School of Computer Applications<br>Pimpri Chinchwad University
+      </p>
+
+      <p class="summary">
+        Ph.D. (Pursuing) • MCA • B.C.S — 18+ Years of Teaching & Research Experience.<br>
+        Specializes in DBMS, Data Warehousing, AI, Machine Learning, Data Mining, Optimization & Software Project Management.
+      </p>
+
+      <div class="cta-row">
+        <a href="about.html" class="btn">About</a>
+        <a href="research.html" class="btn outline">Research</a>
+        <a href="gallery.html" class="btn outline">Gallery</a>
+      </div>
+
+      <p class="email-line">
+        <strong>Email:</strong> ravikant.kale@pcu.edu.in
+      </p>
     </div>
   </div>
+</section>
 
-  <script src="js/main.js"></script>
+<footer>
+  <p>© 2025 Mr. Ravikant Dnyaneshwar Kale | All Rights Reserved</p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

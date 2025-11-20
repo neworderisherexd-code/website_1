@@ -1,69 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research | your_name_here</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Mr. Ravikant Dnyaneshwar Kale</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="logo">your_name_here</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html" class="active">Research</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#" id="contactBtn">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">Mr. Ravikant Dnyaneshwar Kale</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="navlinks">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="research.html">Research</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- ===== MAIN SECTION ===== -->
-  <section class="research">
-    <h1>Research Publications</h1>
-    <p>Below is a collection of research papers dynamically loaded from the backend.</p>
+<section class="research">
+  <h1>Research Publications & Certificates</h1>
+  <p>Images are loaded automatically from the certificates folder.</p>
 
-    <!-- Research Cards Loaded from backend/data/papers.json -->
-    <div id="researchList" class="research-container"></div>
+  <div id="researchGrid" class="research-img-grid"></div>
+</section>
 
-    <hr style="margin: 40px 0; border: 1px solid #ccc;">
+<footer>
+  <p>© 2025 | All Rights Reserved</p>
+</footer>
 
-    <h2>Upload & Preview (Demo)</h2>
-    <p>You can also preview your own PDF research paper locally (for testing only).</p>
-
-    <div id="dropArea">
-      <p>📄 Drag & Drop your PDF here or <span id="browse">Browse</span></p>
-      <input type="file" id="fileInput" accept="application/pdf" hidden>
-    </div>
-
-    <div id="previewArea"></div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 your_name_here | All Rights Reserved</p>
-  </footer>
-
-  <!-- ===== CONTACT POPUP ===== -->
-  <div id="popupForm" class="popup">
-    <div class="popup-content">
-      <span id="closePopup">&times;</span>
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ===== SCRIPTS ===== -->
-  <script src="js/main.js"></script>
-  <script src="js/research.js"></script>
+<script src="js/main.js"></script>
+<script src="js/research.js"></script>
 </body>
 </html>

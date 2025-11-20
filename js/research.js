@@ -1,59 +1,37 @@
-const dropArea = document.getElementById('dropArea');
-const fileInput = document.getElementById('fileInput');
-const browse = document.getElementById('browse');
-const previewArea = document.getElementById('previewArea');
+const certificateFiles = [
+  "C4C.jpg",
+  "C5A-1.jpg",
+  "CERTIFICATE 24-syllabus Design.jpg",
+  "certificate RDK.jpg",
+  "Certificate_of_Participation-Certificate.jpg",
+  "Certificate-Foresight+and+Formulation.jpg",
+  "KALE RAVIKANT DNYANESHWAR RE.jpg",
+  "PROF-RAVIKANT-KALE-Moodle-Test.jpg",
+  "Prof. RAVIKANT KALE_siph_Publication.jpg",
+  "Ravikant Kale_page-0001.jpg",
+  "RAVIKANT_DNYANESHWAR_KALE (2).jpg"
+];
 
-// 1️⃣ Load existing research papers from backend/data/papers.json
-fetch("backend/data/papers.json")
-  .then(response => response.json())
-  .then(papers => {
-    papers.forEach(paper => {
-      const card = document.createElement("div");
-      card.classList.add("paperCard");
-      card.innerHTML = `
-        <h3>${paper.title}</h3>
-        <p><strong>Author:</strong> ${paper.author} | <strong>Year:</strong> ${paper.year}</p>
-        <iframe src="${paper.file}" width="100%" height="400"></iframe>
-      `;
-      previewArea.appendChild(card);
-    });
-  })
-  .catch(err => console.log("Error loading papers:", err));
+const grid = document.getElementById("researchGrid");
 
-// 2️⃣ Local drag-and-drop preview for testing
-browse.onclick = () => fileInput.click();
 
-['dragover', 'drop'].forEach(evt => {
-  dropArea.addEventListener(evt, e => e.preventDefault());
-});
-
-dropArea.addEventListener('dragover', () => dropArea.classList.add('dragover'));
-dropArea.addEventListener('dragleave', () => dropArea.classList.remove('dragover'));
-
-dropArea.addEventListener('drop', e => {
-  dropArea.classList.remove('dragover');
-  handleFiles(e.dataTransfer.files);
-});
-
-fileInput.addEventListener('change', e => handleFiles(e.target.files));
-
-function handleFiles(files) {
-  [...files].forEach(file => {
-    if (file.type === 'application/pdf') {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const card = document.createElement("div");
-        card.classList.add("paperCard");
-        card.innerHTML = `
-          <h3>${file.name}</h3>
-          <p>Uploaded: ${new Date().toLocaleString()}</p>
-          <iframe src="${reader.result}" width="100%" height="400"></iframe>
-        `;
-        previewArea.appendChild(card);
-      };
-      reader.readAsDataURL(file);
-    } else {
-      alert("Please upload PDF files only.");
-    }
-  });
+function cleanName(str) {
+  return str
+    .replace(/\.(jpg|png|jpeg)$/i, "")     
+    .replace(/[_\-]+/g, " ")                 
+    .replace(/\s+/g, " ")                    
+    .trim();                                 
 }
+
+
+certificateFiles.forEach(file => {
+  const card = document.createElement("div");
+  card.classList.add("research-img-card");
+
+  card.innerHTML = `
+    <img src="assets/certificates/${file}" alt="${file}">
+    <p>${cleanName(file)}</p>
+  `;
+
+  grid.appendChild(card);
+});

@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | your_name_here</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Mr. Ravikant Dnyaneshwar Kale</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">your_name_here</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="#" id="contactBtn">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">Mr. Ravikant Dnyaneshwar Kale</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="navlinks">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a class="active" href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="gallery">
-    <h1>Gallery</h1>
-    <div class="gallery-grid">
-      <img src="assets/images/event1.jpg" alt="Workshop">
-      <img src="assets/images/event2.jpg" alt="Conference">
-      <img src="assets/images/event3.jpg" alt="Seminar">
-      <img src="assets/images/event4.jpg" alt="Award Ceremony">
-    </div>
-  </section>
+<section class="gallery">
+  <h1>Gallery</h1>
 
-  <footer>
-    <p>© 2025 your_name_here | All Rights Reserved</p>
-  </footer>
+  <div id="galleryGrid" class="gallery-grid"></div>
+</section>
 
-  <div id="popupForm" class="popup">
-    <div class="popup-content">
-      <span id="closePopup">&times;</span>
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
+<footer>
+  <p>© 2025 | All Rights Reserved</p>
+</footer>
 
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
 </body>
 </html>
