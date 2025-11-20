@@ -1,32 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("researchGrid");
 
-  fetch("/assets/certificates/certificates.json")
-    .then(res => res.json())
-    .then(files => {
-      const grid = document.getElementById("researchGrid");
+  const files = [
+    "C4C.jpg",
+    "C5A-1.jpg",
+    "CERTIFICATE 24-syllabus Design.jpg",
+    "certificate RDK.jpg",
+    "Certificate_of_Participation-Certificate_of_Participation_948 (1).jpg",
+    "Certificate-Foresight+and+Formulate+the+Various+IoT+Security+Models+used+in+Tourism+and+Hospitality--Finalized.jpg",
+    "KALE RAVIKANT DNYANESHWAR Research ethics Certificate.jpg",
+    "PROF-RAVIKANT-KALE-Moodle-Test-for-Teachers-Participant-Test-Certificate_page-0001.jpg",
+    "Prof. RAVIKANT KALE_siph_Publication.jpg",
+    "Ravikant Kale_page-0001.jpg",
+    "RAVIKANT_DNYANESHWAR_KALE (2)_page-0001.jpg"
+  ];
 
-      files.forEach(file => {
+  files.forEach(file => {
+    const card = document.createElement("div");
+    card.classList.add("research-img-card");
 
-        const card = document.createElement("div");
-        card.classList.add("research-img-card");
+    const name = file
+      .replace(/\.(jpg|jpeg|png)$/i, "")
+      .replace(/[_\-]+/g, " ")
+      .trim();
 
-        const name = file
-          .replace(/\.(jpg|jpeg|png)$/i, "")
-          .replace(/[_-]+/g, " ")
-          .trim();
+    card.innerHTML = `
+      <img src="/assets/certificates/${file}" alt="${name}">
+      <p>${name}</p>
+    `;
 
-        card.innerHTML = `
-          <img src="/assets/certificates/${file}" alt="${name}">
-          <p>${name}</p>
-        `;
-
-        grid.appendChild(card);
-      });
-    })
-    .catch(err => {
-      console.error("Failed to load certificates:", err);
-      document.getElementById("researchGrid").innerHTML =
-        "<p style='color:red'>Failed to load certificates.</p>";
-    });
-
+    grid.appendChild(card);
+  });
 });
