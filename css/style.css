@@ -1,156 +1,70 @@
-/* ---------------- HERO SECTION (UPDATED) ---------------- */
-
-.hero {
-  min-height: 85vh;
-  background: linear-gradient(180deg, #0a1630, #071223 60%);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Floating animated math equations */
-.equation-bg {
-  position: absolute;
-  inset: 0;
-  opacity: 0.07;
-  font-size: 130px;
-  font-weight: bold;
-  white-space: nowrap;
-  animation: slideMath 25s linear infinite;
-  pointer-events: none;
-  color: white;
-}
-
-@keyframes slideMath {
-  from { transform: translateX(45%); }
-  to   { transform: translateX(-160%); }
-}
-
-/* Hero Content Card */
-.hero-card {
-  display: flex;
-  gap: 30px;
-  background: rgba(255, 255, 255, 0.07);
-  padding: 35px;
-  border-radius: 18px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
-  max-width: 1000px;
+/* ================= NAVBAR RESET ================= */
+.navbar {
   width: 100%;
-  z-index: 2;
-  flex-wrap: wrap;
-}
-
-/* Profile Image */
-.profile-img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.35);
-}
-
-/* Text */
-.hero-text h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.role {
-  font-size: 18px;
-  opacity: 0.9;
-  line-height: 1.5;
-}
-
-.summary {
-  margin: 15px 0 20px;
-  max-width: 600px;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-/* CTA Buttons */
-.cta-row {
+  background: linear-gradient(90deg, #081427, #0d2b52);
+  color: white;
+  padding: 12px 30px;
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.btn {
-  background: #ffd947;
-  color: #111;
-  padding: 10px 18px;
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navlinks ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navlinks a {
+  color: #d7e7ff;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+  font-weight: 600;
+  padding-bottom: 4px;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #ffcf3a;
+.navlinks a:hover,
+.navlinks a.active {
+  border-bottom: 2px solid #ffd947;
 }
 
-.btn.outline {
-  background: transparent;
-  border: 2px solid #ffd947;
-  color: #ffd947;
+/* MOBILE MENU */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
 }
 
-.btn.outline:hover {
-  background: #ffd947;
-  color: #111;
-}
-
-/* Email Line */
-.email-line {
-  margin-top: 10px;
-  opacity: 0.85;
-  font-size: 16px;
-}
-
-/* Responsive */
+/* RESPONSIVE FIX */
 @media (max-width: 900px) {
-  .hero-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  .navlinks {
+    display: none;
   }
-}
-.contact-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 2px solid #cdd7ff;
-  font-size: 16px;
-  outline: none;
-}
-
-.contact-form textarea {
-  height: 140px;
-  resize: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #688cff;
-}
-
-.contact-form .btn {
-  width: 180px;
-  background: #ffd947;
-  cursor: pointer;
+  .navlinks.open {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    background: #0d1c3a;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .navlinks ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-toggle {
+    display: block;
+  }
 }
